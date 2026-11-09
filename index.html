@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JF Calhas | Telhados, Coberturas e Estruturas Metálicas — Ribeirão Preto</title>
+  <meta name="description" content="Fim das infiltrações e goteiras. Soluções definitivas em calhas, telhados e estruturas metálicas para residências e empresas em Ribeirão Preto e região. Orçamento grátis.">
+  <meta property="og:title" content="JF Calhas | Fim das Infiltrações e Goteiras">
+  <meta property="og:description" content="Soluções definitivas em telhados, coberturas e estruturas metálicas. Atendemos Ribeirão Preto e região.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/telhado-metalico.webp">
+  <link rel="icon" href="assets/logo-jf.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; background: #0A0A0A; color: #E8E8E8; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; }
+
+    :root {
+      --y:#FFBB00; --yl:#FFD050; --yd:#CC9500; --o:#FF5500; --od:#CC4400;
+      --k:#0A0A0A; --d1:#111111; --d2:#181818; --d3:#222222; --d4:#2C2C2C; --d5:#3A3A3A;
+      --br:#2A1200; --tx:#E8E8E8; --tm:#AAAAAA; --ts:#666666;
+      --max:1200px; --rs:8px; --r:12px; --rl:20px;
+    }
+
+    .stripe { height:36px; background:repeating-linear-gradient(-45deg,var(--y) 0,var(--y) 18px,var(--d1) 18px,var(--d1) 36px); flex-shrink:0; }
+
+    .btn { display:inline-flex; align-items:center; gap:8px; padding:14px 28px; border-radius:var(--rs); font-family:'Barlow Condensed',sans-serif; font-size:1.05rem; font-weight:800; letter-spacing:.05em; text-transform:uppercase; border:none; transition:transform .15s ease,box-shadow .15s ease,background .15s ease; cursor:pointer; white-space:nowrap; }
+    .btn:hover { transform:translateY(-2px); } .btn:active { transform:translateY(0); } .btn svg { flex-shrink:0; }
+    .btn-o { background:var(--o); color:#fff; box-shadow:0 4px 16px rgba(255,85,0,.4),0 2px 4px rgba(0,0,0,.3); }
+    .btn-o:hover { background:var(--od); box-shadow:0 6px 24px rgba(255,85,0,.5); }
+    .btn-g { background:transparent; color:var(--y); border:2px solid rgba(255,187,0,.5); }
+    .btn-g:hover { background:rgba(255,187,0,.08); border-color:var(--y); }
+
+    .ctn { max-width:var(--max); margin:0 auto; padding:0 20px; }
+
+    /* LOGO */
+    .logo-img { width:46px; height:46px; border-radius:var(--rs); object-fit:cover; border:1px solid rgba(255,187,0,.25); flex-shrink:0; background:#000; }
+
+    /* NAV */
+    .nav { position:sticky; top:0; z-index:100; background:rgba(10,10,10,.96); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(255,187,0,.12); transition:box-shadow .3s ease; }
+    .nav-in { max-width:var(--max); margin:0 auto; padding:0 20px; height:68px; display:flex; align-items:center; justify-content:space-between; }
+    .nav-logo { display:flex; align-items:center; gap:12px; }
+    .logo-txt .name { display:block; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.25rem; letter-spacing:.06em; color:#fff; line-height:1; }
+    .logo-txt .sub { display:block; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--tm); margin-top:2px; }
+    .nav-act { display:flex; align-items:center; gap:16px; }
+    .nav-ph { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:.95rem; color:var(--tm); transition:color .2s; }
+    .nav-ph:hover { color:var(--y); } .nav-ph span { color:var(--y); }
+    .nav-btn { padding:10px 20px; font-size:.9rem; }
+
+    /* HERO */
+    .hero { position:relative; overflow:hidden; display:flex; align-items:center; }
+    .hero-bg { position:absolute; inset:0; z-index:0; }
+    .hero-bg img { width:100%; height:100%; object-fit:cover; opacity:.28; }
+    .hero-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,rgba(8,8,8,.96) 0%,rgba(10,10,10,.8) 45%,rgba(12,8,0,.55) 100%),radial-gradient(ellipse at 78% 50%,rgba(255,187,0,.1) 0%,transparent 60%); }
+    .hero-in { position:relative; z-index:2; display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:center; max-width:var(--max); margin:0 auto; padding:72px 20px; width:100%; }
+    .hero-eyebrow { margin-bottom:22px; }
+    .tag-pill { display:inline-flex; align-items:center; gap:7px; padding:7px 16px; border-radius:100px; font-family:'Barlow Condensed',sans-serif; font-size:.78rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,187,0,.1); border:1px solid rgba(255,187,0,.25); color:var(--y); }
+    .tag-pill::before { content:'⚡'; font-size:.8rem; }
+    .hero-h1 { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(2.7rem,5.3vw,4.3rem); line-height:.97; color:#fff; margin-bottom:24px; text-shadow:0 2px 24px rgba(0,0,0,.7); }
+    .hero-h1 .ay { color:var(--y); } .hero-h1 .ao { color:var(--o); }
+    .hero-sub { font-size:1.05rem; line-height:1.65; color:#D8D8D8; max-width:460px; margin-bottom:32px; text-shadow:0 1px 10px rgba(0,0,0,.5); }
+    .hero-checks { display:flex; flex-direction:column; gap:12px; margin-bottom:36px; }
+    .hc-row { display:flex; align-items:center; gap:10px; font-size:.95rem; color:var(--tx); }
+    .hc-ic { width:24px; height:24px; border-radius:50%; background:rgba(255,187,0,.14); border:1.5px solid rgba(255,187,0,.3); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .hc-ic svg { width:11px; height:11px; stroke:var(--y); fill:none; stroke-width:3; }
+    .hero-ctas { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+
+    .fc-outer { position:relative; animation:floatY 5s ease-in-out infinite; }
+    @keyframes floatY { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+    .fc-outer::before { content:''; position:absolute; inset:-3px; background:linear-gradient(135deg,var(--y),var(--o),var(--y)); border-radius:calc(var(--rl) + 3px); z-index:-1; opacity:.5; filter:blur(10px); }
+    .form-card { background:rgba(22,17,5,.96); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-radius:var(--rl); padding:36px 32px; border:1px solid rgba(255,187,0,.22); box-shadow:0 4px 8px rgba(0,0,0,.4),0 20px 48px rgba(0,0,0,.75); position:relative; }
+    .form-card::before { content:''; position:absolute; top:0; left:24px; right:24px; height:3px; background:linear-gradient(90deg,var(--y),var(--o)); border-radius:0 0 var(--rs) var(--rs); }
+    .fc-ttl { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.5rem; color:#fff; margin-bottom:4px; }
+    .fc-sub { font-size:.84rem; color:var(--tm); margin-bottom:24px; } .fc-sub strong { color:var(--y); }
+    .fr { margin-bottom:14px; }
+    .fr label { display:block; font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--tm); margin-bottom:7px; }
+    .fr input, .fr textarea { width:100%; background:rgba(255,255,255,.04); border:1.5px solid var(--d5); border-radius:var(--rs); padding:12px 15px; font-family:'Barlow',sans-serif; font-size:.93rem; color:var(--tx); outline:none; transition:border-color .2s ease,box-shadow .2s ease,background .2s ease; resize:vertical; }
+    .fr input:focus, .fr textarea:focus { border-color:var(--y); background:rgba(255,187,0,.04); box-shadow:0 0 0 3px rgba(255,187,0,.12); }
+    .fr input::placeholder, .fr textarea::placeholder { color:var(--ts); }
+    .btn-sub { width:100%; margin-top:18px; padding:17px 20px; background:linear-gradient(135deg,var(--o) 0%,#D44800 100%); color:#fff; border:none; border-radius:var(--rs); font-family:'Barlow Condensed',sans-serif; font-size:1.1rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px; box-shadow:0 4px 20px rgba(255,85,0,.45),0 2px 4px rgba(0,0,0,.3); transition:transform .15s ease,box-shadow .15s ease; position:relative; overflow:hidden; }
+    .btn-sub::before { content:''; position:absolute; top:0; left:-100%; width:60%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent); transform:skewX(-20deg); transition:left .5s ease; }
+    .btn-sub:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(255,85,0,.55); } .btn-sub:hover::before { left:150%; } .btn-sub:active { transform:translateY(0); }
+    .btn-sub svg { width:18px; height:18px; fill:none; stroke:#fff; stroke-width:2; flex-shrink:0; }
+    .form-note { text-align:center; font-size:.77rem; color:var(--ts); margin-top:12px; display:flex; align-items:center; justify-content:center; gap:5px; }
+    .form-note svg { width:11px; height:11px; fill:var(--ts); flex-shrink:0; }
+
+    .sec-hdr { text-align:center; margin-bottom:52px; }
+    .sec-eye { display:inline-block; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:.78rem; letter-spacing:.15em; text-transform:uppercase; padding:6px 16px; border-radius:100px; margin-bottom:14px; }
+    .sec-ttl { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(2rem,4vw,3rem); line-height:1.0; } .sec-ttl .lt { font-weight:400; }
+    .sec-sub { font-size:.95rem; margin-top:10px; max-width:520px; margin-left:auto; margin-right:auto; }
+
+    /* SERVICES */
+    .services { position:relative; padding:80px 0; overflow:hidden; }
+    .services::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,#FFC400 0%,#FF9800 42%,#FFBB00 72%,#FFC400 100%); }
+    .services::after { content:''; position:absolute; inset:0; background:repeating-linear-gradient(-45deg,transparent,transparent 24px,rgba(0,0,0,.04) 24px,rgba(0,0,0,.04) 25px); pointer-events:none; }
+    .srv-wrap { position:relative; z-index:1; }
+    .services .sec-eye { color:rgba(0,0,0,.55); background:rgba(0,0,0,.08); } .services .sec-ttl { color:var(--k); } .services .sec-sub { color:rgba(0,0,0,.55); }
+    .srv-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .srv-card { background:var(--d2); border-radius:var(--r); padding:28px 24px; border:1px solid rgba(255,255,255,.05); box-shadow:0 4px 8px rgba(0,0,0,.3),0 16px 32px rgba(0,0,0,.5); position:relative; overflow:hidden; transition:transform .25s ease,box-shadow .25s ease; }
+    .srv-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--y),var(--o)); }
+    .srv-card:hover { transform:translateY(-6px) scale(1.015); box-shadow:0 12px 32px rgba(0,0,0,.7),0 4px 8px rgba(0,0,0,.4); }
+    .srv-ic { width:56px; height:56px; border-radius:var(--rs); background:rgba(255,187,0,.1); border:1px solid rgba(255,187,0,.15); display:flex; align-items:center; justify-content:center; margin-bottom:20px; }
+    .srv-ic svg { width:28px; height:28px; }
+    .srv-badge { display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--y); background:rgba(255,187,0,.1); border:1px solid rgba(255,187,0,.2); padding:3px 10px; border-radius:100px; margin-bottom:10px; }
+    .srv-nm { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.25rem; color:#fff; margin-bottom:8px; }
+    .srv-ds { font-size:.88rem; line-height:1.6; color:var(--tm); }
+
+    /* PORTFOLIO */
+    .portfolio { background:var(--d1); padding:80px 0; position:relative; overflow:hidden; }
+    .portfolio::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(255,187,0,.04) 0%,transparent 60%); pointer-events:none; }
+    .portfolio .sec-eye { color:var(--tm); background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); } .portfolio .sec-ttl { color:#fff; } .portfolio .sec-sub { color:var(--tm); }
+    .pf-wrap { position:relative; z-index:1; }
+    .pf-grid { display:grid; grid-template-columns:2fr 1fr 1fr; grid-template-rows:220px 220px; gap:16px; }
+    .pf-item { position:relative; border-radius:var(--r); overflow:hidden; border:1px solid rgba(255,255,255,.07); box-shadow:0 8px 24px rgba(0,0,0,.5); }
+    .pf-item img { width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+    .pf-item:hover img { transform:scale(1.06); }
+    .pf-big { grid-row:span 2; }
+    .pf-cap { position:absolute; left:0; right:0; bottom:0; padding:20px 18px 14px; background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.4) 60%,transparent 100%); }
+    .pf-cap .t { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.15rem; color:#fff; line-height:1.1; }
+    .pf-cap .s { font-size:.78rem; color:var(--y); margin-top:2px; }
+
+    /* PROOF */
+    .proof-bar { background:var(--y); padding:22px 0; }
+    .proof-in { display:flex; align-items:center; justify-content:center; gap:60px; flex-wrap:wrap; }
+    .proof-item { text-align:center; }
+    .proof-num { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:2rem; line-height:1; color:var(--k); }
+    .proof-lbl { font-size:.75rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:rgba(0,0,0,.55); margin-top:3px; }
+    .proof-sep { width:1px; height:40px; background:rgba(0,0,0,.2); }
+
+    /* AUTHORITY */
+    .authority { background:var(--k); padding:80px 0; position:relative; overflow:hidden; }
+    .auth-in { max-width:var(--max); margin:0 auto; padding:0 20px; display:grid; grid-template-columns:0.85fr 1.15fr; gap:56px; align-items:center; }
+    .auth-photo { position:relative; }
+    .auth-photo img { width:100%; border-radius:var(--rl); border:1px solid rgba(255,187,0,.2); box-shadow:0 20px 50px rgba(0,0,0,.6); }
+    .auth-photo::after { content:''; position:absolute; inset:-2px; border-radius:calc(var(--rl) + 2px); background:linear-gradient(135deg,rgba(255,187,0,.3),transparent 50%); z-index:-1; filter:blur(8px); }
+    .auth-badge { position:absolute; bottom:18px; left:18px; right:18px; background:rgba(17,17,17,.92); backdrop-filter:blur(10px); border:1px solid rgba(255,187,0,.2); border-radius:var(--r); padding:14px 18px; display:flex; align-items:center; gap:12px; }
+    .auth-badge .ab-ic { width:40px; height:40px; border-radius:50%; background:rgba(255,187,0,.12); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1.2rem; }
+    .auth-badge .ab-nm { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.05rem; color:#fff; line-height:1; }
+    .auth-badge .ab-rl { font-size:.74rem; color:var(--y); margin-top:3px; letter-spacing:.04em; }
+    .auth-eye { display:inline-block; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:.78rem; letter-spacing:.15em; text-transform:uppercase; color:var(--tm); background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); padding:6px 16px; border-radius:100px; margin-bottom:18px; }
+    .auth-ttl { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(1.9rem,3.6vw,2.8rem); line-height:1.05; color:#fff; margin-bottom:18px; } .auth-ttl .ay { color:var(--y); }
+    .auth-p { font-size:1rem; line-height:1.7; color:var(--tm); margin-bottom:16px; } .auth-p strong { color:var(--tx); }
+    .auth-list { display:flex; flex-direction:column; gap:12px; margin:24px 0 28px; }
+    .auth-li { display:flex; align-items:center; gap:12px; font-size:.95rem; color:var(--tx); }
+    .auth-li .ck { width:24px; height:24px; border-radius:50%; background:rgba(255,187,0,.12); border:1.5px solid rgba(255,187,0,.3); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .auth-li .ck svg { width:11px; height:11px; stroke:var(--y); fill:none; stroke-width:3; }
+
+    /* FILTER */
+    .filter { background:var(--d1); padding:80px 0; position:relative; overflow:hidden; }
+    .filter::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 100%,rgba(255,187,0,.03) 0%,transparent 70%); pointer-events:none; }
+    .filter .sec-eye { color:var(--tm); background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); } .filter .sec-ttl { color:#fff; } .filter .sec-sub { color:var(--tm); }
+    .flt-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:48px; }
+    .flt-col { background:var(--d2); border-radius:var(--rl); padding:36px 32px; border:1px solid rgba(255,255,255,.06); box-shadow:0 4px 8px rgba(0,0,0,.3); }
+    .flt-is { border-top:3px solid #22C55E; } .flt-not { border-top:3px solid #EF4444; }
+    .flt-col-ttl { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.4rem; display:flex; align-items:center; gap:10px; margin-bottom:24px; }
+    .col-ic { width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .ic-is { background:rgba(34,197,94,.12); } .ic-not { background:rgba(239,68,68,.12); }
+    .ic-is svg { stroke:#22C55E; } .ic-not svg { stroke:#EF4444; } .col-ic svg { width:18px; height:18px; fill:none; stroke-width:2.5; }
+    .col-is-txt { color:#22C55E; } .col-not-txt { color:#EF4444; }
+    .flt-items { display:flex; flex-direction:column; gap:18px; }
+    .fi-row { display:flex; align-items:flex-start; gap:12px; }
+    .fi-dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; margin-top:7px; } .dot-g { background:#22C55E; } .dot-r { background:#EF4444; }
+    .fi-txt { font-size:.92rem; line-height:1.55; color:var(--tm); } .fi-txt strong { color:var(--tx); }
+    .flt-cta { text-align:center; margin-top:48px; } .flt-cta p { font-size:1rem; color:var(--tm); margin-bottom:20px; }
+
+    /* REVIEWS (Google) */
+    .testi { background:var(--br); padding:80px 0; position:relative; overflow:hidden; }
+    .testi::before { content:''; position:absolute; inset:0; background:linear-gradient(140deg,var(--br) 0%,var(--d1) 60%,#0A0806 100%); }
+    .testi-in { position:relative; z-index:1; }
+    .testi .sec-eye { color:var(--tm); background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); } .testi .sec-ttl { color:#fff; } .testi .sec-sub { color:var(--tm); }
+    .g-summary { display:flex; align-items:center; justify-content:center; gap:14px; margin:0 auto 42px; background:var(--d2); border:1px solid rgba(255,255,255,.08); border-radius:100px; padding:12px 26px; width:max-content; max-width:92%; box-shadow:0 8px 24px rgba(0,0,0,.4); }
+    .g-summary .gs-g { width:26px; height:26px; flex-shrink:0; }
+    .g-summary .gs-score { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:1.6rem; color:#fff; line-height:1; }
+    .g-summary .gs-stars { color:#FFBB00; font-size:1rem; letter-spacing:1px; line-height:1; }
+    .g-summary .gs-lbl { font-size:.78rem; color:var(--tm); line-height:1.3; }
+    .g-summary .gs-sep { width:1px; height:34px; background:rgba(255,255,255,.1); }
+    .rv-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .rv-card { background:var(--d2); border-radius:var(--r); padding:24px 24px 26px; border:1px solid rgba(255,255,255,.06); box-shadow:0 4px 8px rgba(0,0,0,.3),0 12px 28px rgba(0,0,0,.45); display:flex; flex-direction:column; gap:12px; position:relative; transition:transform .25s ease,box-shadow .25s ease; }
+    .rv-card:hover { transform:translateY(-4px); box-shadow:0 14px 34px rgba(0,0,0,.6); }
+    .rv-g { position:absolute; top:22px; right:22px; width:20px; height:20px; }
+    .rv-head { display:flex; align-items:center; gap:12px; padding-right:28px; }
+    .rv-av { width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:1.3rem; color:#fff; flex-shrink:0; }
+    .rv-nm { font-weight:700; color:#fff; font-size:.98rem; line-height:1.15; }
+    .rv-sub { font-size:.72rem; color:var(--ts); margin-top:3px; display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+    .rv-lg { color:var(--y); font-weight:600; }
+    .rv-stars { color:#FFBB00; font-size:.95rem; letter-spacing:2px; line-height:1; }
+    .rv-txt { font-size:.93rem; line-height:1.6; color:var(--tx); flex:1; }
+    .testi-cta { text-align:center; margin-top:44px; }
+    .btn-google { display:inline-flex; align-items:center; gap:10px; background:#fff; color:#3c4043; padding:13px 26px; border-radius:var(--rs); font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:1rem; letter-spacing:.03em; box-shadow:0 4px 16px rgba(0,0,0,.3); transition:transform .15s ease,box-shadow .15s ease; }
+    .btn-google:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.4); }
+    .btn-google svg { width:20px; height:20px; }
+
+    /* CTA */
+    .cta-sec { background:var(--d2); padding:80px 20px; text-align:center; border-top:1px solid rgba(255,187,0,.08); }
+    .cta-ttl { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(2rem,4vw,3.2rem); line-height:1.05; color:#fff; margin-bottom:14px; } .cta-ttl .ay { color:var(--y); }
+    .cta-p { font-size:1rem; color:var(--tm); max-width:500px; margin:0 auto 36px; }
+    .cta-btns { display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; }
+
+    /* FOOTER */
+    .footer { background:var(--k); border-top:1px solid rgba(255,255,255,.06); padding:56px 20px 32px; }
+    .ft-top { max-width:var(--max); margin:0 auto; display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:48px; margin-bottom:48px; }
+    .ft-logo { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+    .ft-brand p { font-size:.88rem; line-height:1.65; color:var(--tm); max-width:260px; }
+    .ft-col-ttl { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:.9rem; letter-spacing:.1em; text-transform:uppercase; color:var(--y); margin-bottom:16px; }
+    .ft-links { display:flex; flex-direction:column; gap:9px; }
+    .ft-lk { font-size:.88rem; color:var(--tm); transition:color .2s; } .ft-lk:hover { color:var(--y); }
+    .ft-contact p { font-size:.88rem; color:var(--tm); line-height:1.9; }
+    .ft-contact a { color:var(--y); transition:opacity .2s; } .ft-contact a:hover { opacity:.8; }
+    .ft-bot { max-width:var(--max); margin:0 auto; border-top:1px solid rgba(255,255,255,.06); padding-top:24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .ft-legal { font-size:.77rem; color:var(--ts); line-height:1.65; } .ft-legal strong { color:var(--tm); }
+    .ft-priv { font-size:.77rem; color:var(--ts); transition:color .2s; } .ft-priv:hover { color:var(--y); }
+
+    /* WHATSAPP FLOAT */
+    .wf { position:fixed; bottom:24px; right:24px; z-index:999; display:flex; align-items:center; gap:10px; background:#25D366; color:#fff; padding:13px 20px 13px 15px; border-radius:100px; box-shadow:0 4px 16px rgba(37,211,102,.4),0 2px 8px rgba(0,0,0,.3); font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:.95rem; transition:transform .2s ease,box-shadow .2s ease; animation:wfPulse 2.5s ease-in-out infinite; }
+    .wf:hover { transform:translateY(-3px) scale(1.02); box-shadow:0 8px 24px rgba(37,211,102,.5); animation:none; }
+    .wf svg { width:22px; height:22px; fill:#fff; flex-shrink:0; }
+    @keyframes wfPulse { 0%,100%{box-shadow:0 4px 16px rgba(37,211,102,.4),0 2px 8px rgba(0,0,0,.3);} 50%{box-shadow:0 4px 16px rgba(37,211,102,.4),0 0 0 10px rgba(37,211,102,.08),0 2px 8px rgba(0,0,0,.3);} }
+
+    .fi { opacity:0; transform:translateY(28px); transition:opacity .6s ease,transform .6s ease; }
+    .fi.vis { opacity:1; transform:translateY(0); }
+    .fi-d1 { transition-delay:.1s; } .fi-d2 { transition-delay:.2s; } .fi-d3 { transition-delay:.3s; }
+    @keyframes shake { 0%,100%{transform:translateX(0);} 20%{transform:translateX(-8px);} 40%{transform:translateX(8px);} 60%{transform:translateX(-6px);} 80%{transform:translateX(6px);} }
+
+    @media (max-width:1024px) {
+      .hero-in { grid-template-columns:1fr; gap:44px; padding-top:56px; }
+      .hero-h1 { font-size:3.4rem; } .hero-sub { max-width:100%; } .fc-outer { animation:none; }
+      .srv-grid { grid-template-columns:repeat(2,1fr); }
+      .pf-grid { grid-template-columns:1fr 1fr; grid-template-rows:200px 200px 200px; }
+      .pf-big { grid-row:span 2; grid-column:span 1; }
+      .auth-in { grid-template-columns:1fr; gap:36px; } .auth-photo { max-width:420px; margin:0 auto; }
+      .rv-grid { grid-template-columns:repeat(2,1fr); }
+      .ft-top { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width:768px) {
+      .nav-ph { display:none; }
+      .nav-btn { font-size:.72rem; padding:9px 13px; white-space:normal; line-height:1.05; text-align:center; }
+      .hero-in { padding:44px 20px 52px; } .hero-bg img { opacity:.2; } .hero-h1 { font-size:2.7rem; }
+      .srv-grid { grid-template-columns:1fr; }
+      .pf-grid { grid-template-columns:1fr 1fr; grid-template-rows:170px 170px 170px; gap:12px; }
+      .flt-grid { grid-template-columns:1fr; }
+      .proof-in { gap:32px; } .proof-sep { display:none; }
+      .cta-btns { flex-direction:column; align-items:stretch; } .cta-btns .btn { justify-content:center; }
+      .ft-top { grid-template-columns:1fr; gap:32px; } .ft-bot { flex-direction:column; align-items:flex-start; gap:10px; }
+      .wf span { display:none; } .wf { padding:15px; border-radius:50%; }
+    }
+    @media (max-width:560px) {
+      .rv-grid { grid-template-columns:1fr; }
+      .g-summary { flex-wrap:wrap; justify-content:center; border-radius:var(--rl); }
+    }
+    @media (max-width:480px) {
+      .pf-grid { grid-template-columns:1fr; grid-template-rows:none; } .pf-item { height:200px; } .pf-big { grid-row:auto; }
+      .hero-ctas { flex-direction:column; align-items:stretch; } .hero-ctas .btn { justify-content:center; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="stripe"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="topNav">
+    <div class="nav-in">
+      <a href="#inicio" class="nav-logo">
+        <img class="logo-img" src="assets/logo-jf.webp" alt="JF Calhas">
+        <div class="logo-txt">
+          <span class="name">JF CALHAS</span>
+          <span class="sub">Estruturas Metálicas</span>
+        </div>
+      </a>
+      <div class="nav-act">
+        <a href="tel:+5516993462652" class="nav-ph">📞 <span>(16) 99346-2652</span></a>
+        <a href="#orcamento" class="btn btn-o nav-btn">Orçamento rápido e preciso</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <img src="assets/telhado-metalico.webp" alt="Telhado metálico instalado pela JF Calhas em Ribeirão Preto" width="1600" height="900">
+    </div>
+    <div class="hero-in">
+      <div class="hero-cnt">
+        <div class="hero-eyebrow"><span class="tag-pill">Atendimento em Ribeirão Preto e Região</span></div>
+        <h1 class="hero-h1">CHEGA DE<br><span class="ay">Infiltrações,</span><br>Goteiras e<br>Estruturas<br><span class="ao">Comprometidas</span></h1>
+        <p class="hero-sub">Soluções definitivas em telhados, coberturas e calhas para residências e empresas. Proteja seu patrimônio com quem entende de estruturas de alta durabilidade.</p>
+        <div class="hero-checks">
+          <div class="hc-row"><div class="hc-ic"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span>Orçamento sem compromisso — resposta em até 2 horas</span></div>
+          <div class="hc-row"><div class="hc-ic"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span>Materiais galvanizados de alta durabilidade</span></div>
+          <div class="hc-row"><div class="hc-ic"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span>Equipe especializada — residências e empresas</span></div>
+        </div>
+        <div class="hero-ctas">
+          <a href="https://wa.me/5516993462652?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento." class="btn btn-o js-wa" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Falar no WhatsApp
+          </a>
+          <a href="#orcamento" class="btn btn-g">Ver Formulário ↓</a>
+        </div>
+      </div>
+
+      <div class="fc-outer" id="orcamento">
+        <div class="form-card">
+          <h3 class="fc-ttl">Solicite seu Orçamento</h3>
+          <p class="fc-sub">Resposta em até <strong>2 horas</strong> em dias úteis</p>
+          <form id="leadForm" novalidate autocomplete="on">
+            <div class="fr"><label for="nome">Seu nome *</label><input type="text" id="nome" name="nome" placeholder="Como podemos te chamar?" required autocomplete="name"></div>
+            <div class="fr"><label for="cidade">Cidade *</label><input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required autocomplete="address-level2"></div>
+            <div class="fr"><label for="wpp">WhatsApp *</label><input type="tel" id="wpp" name="whatsapp" placeholder="(16) 99000-0000" required autocomplete="tel" inputmode="numeric"></div>
+            <div class="fr"><label for="prob">Descreva o problema *</label><textarea id="prob" name="problema" placeholder="Ex: goteiras no telhado da garagem, calha entupida, cobertura danificada..." rows="3" required></textarea></div>
+            <button type="submit" class="btn-sub" id="subBtn">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5 19.79 19.79 0 01.07 1 2 2 0 012 .07h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z" stroke-width="1.5"/></svg>
+              SOLICITAR ORÇAMENTO AGORA
+            </button>
+            <p class="form-note"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>Dados protegidos pela LGPD</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe"></div>
+
+  <!-- ==================== SERVIÇOS ==================== -->
+  <section class="services" id="servicos">
+    <div class="ctn srv-wrap">
+      <div class="sec-hdr">
+        <div class="sec-eye">Nossas Soluções</div>
+        <h2 class="sec-ttl">O que a JF Calhas <span class="lt">resolve</span></h2>
+        <p class="sec-sub">Cobertura completa para calhas, telhados e estruturas metálicas — residências e empresas.</p>
+      </div>
+      <div class="srv-grid">
+        <div class="srv-card fi">
+          <div class="srv-ic"><svg viewBox="0 0 28 28" fill="none"><path d="M4 8 L14 18 L24 8" stroke="#FFBB00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 8 H24" stroke="#FFBB00" stroke-width="2.5" stroke-linecap="round"/><circle cx="10" cy="22" r="1.5" fill="#FF5500"/><circle cx="14" cy="24" r="1.5" fill="#FF5500"/><circle cx="18" cy="22" r="1.5" fill="#FF5500"/></svg></div>
+          <span class="srv-badge">Mais Solicitado</span>
+          <h3 class="srv-nm">Calhas, Rufos e Pingadeiras</h3>
+          <p class="srv-ds">Fim das infiltrações, manchas e danos causados pelo acúmulo de água na estrutura do seu imóvel.</p>
+        </div>
+        <div class="srv-card fi fi-d1">
+          <div class="srv-ic"><svg viewBox="0 0 28 28" fill="none"><polygon points="14,4 24,14 14,24 4,14" stroke="#FFBB00" stroke-width="2" fill="none"/><line x1="4" y1="14" x2="24" y2="14" stroke="#FF5500" stroke-width="1.5" stroke-dasharray="3 2"/><line x1="14" y1="4" x2="14" y2="24" stroke="#FF5500" stroke-width="1.5" stroke-dasharray="3 2"/></svg></div>
+          <h3 class="srv-nm">Estruturas em Galvalume</h3>
+          <p class="srv-ds">Estruturas metálicas galvanizadas de alta resistência à corrosão. Décadas de durabilidade garantida.</p>
+        </div>
+        <div class="srv-card fi fi-d2">
+          <div class="srv-ic"><svg viewBox="0 0 28 28" fill="none"><path d="M4 18 L7 10 L10 14 L14 6 L18 14 L21 10 L24 18 Z" stroke="#FFBB00" stroke-width="2" stroke-linejoin="round" fill="rgba(255,187,0,0.08)"/><line x1="4" y1="18" x2="24" y2="18" stroke="#FFBB00" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="22" x2="22" y2="22" stroke="#FF5500" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3 class="srv-nm">Telhas em Aço e Sanduíche</h3>
+          <p class="srv-ds">Telhas metálicas com isolamento térmico e acústico. Conforto superior com resistência incomparável.</p>
+        </div>
+        <div class="srv-card fi fi-d1">
+          <div class="srv-ic"><svg viewBox="0 0 28 28" fill="none"><path d="M4 22 Q14 4 24 22" stroke="#FFBB00" stroke-width="2.5" fill="none" stroke-linecap="round"/><line x1="4" y1="22" x2="24" y2="22" stroke="#FFBB00" stroke-width="2" stroke-linecap="round"/><path d="M8 22 Q14 11 20 22" stroke="#FF5500" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-dasharray="3 2"/></svg></div>
+          <h3 class="srv-nm">Coberturas Metálicas</h3>
+          <p class="srv-ds">Galpões industriais e coberturas residenciais com estruturas robustas projetadas para décadas.</p>
+        </div>
+        <div class="srv-card fi fi-d2">
+          <div class="srv-ic"><svg viewBox="0 0 28 28" fill="none"><line x1="4" y1="8" x2="24" y2="8" stroke="#FFBB00" stroke-width="2.5" stroke-linecap="round"/><line x1="6" y1="8" x2="8" y2="24" stroke="#FFBB00" stroke-width="2" stroke-linecap="round"/><line x1="14" y1="8" x2="14" y2="24" stroke="#FFBB00" stroke-width="2" stroke-linecap="round"/><line x1="22" y1="8" x2="20" y2="24" stroke="#FFBB00" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="16" x2="24" y2="16" stroke="#FF5500" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 2"/></svg></div>
+          <h3 class="srv-nm">Pergolados Metálicos</h3>
+          <p class="srv-ds">Estética moderna com resistência do aço galvanizado. Valoriza e protege áreas externas da sua propriedade.</p>
+        </div>
+        <div class="srv-card fi fi-d3">
+          <div class="srv-ic"><svg viewBox="0 0 28 28" fill="none"><path d="M4 8 Q7 4 10 8 Q13 12 16 8 Q19 4 22 8" stroke="#FFBB00" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 15 Q7 11 10 15 Q13 19 16 15 Q19 11 22 15" stroke="#FFBB00" stroke-width="2" fill="rgba(255,187,0,0.08)" stroke-linecap="round"/><path d="M4 22 Q7 18 10 22 Q13 26 16 22 Q19 18 22 22" stroke="#FF5500" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
+          <h3 class="srv-nm">Coberturas em Policarbonato</h3>
+          <p class="srv-ds">Luz natural com proteção total. Ideal para varandas, áreas de lazer e garagens com visual diferenciado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PORTFOLIO ==================== -->
+  <section class="portfolio" id="trabalhos">
+    <div class="ctn pf-wrap">
+      <div class="sec-hdr">
+        <div class="sec-eye">Trabalhos Reais</div>
+        <h2 class="sec-ttl">Obras entregues pela <span style="color:var(--y)">JF Calhas</span></h2>
+        <p class="sec-sub">Fotos reais de serviços executados em Ribeirão Preto e região — acabamento e durabilidade que você pode ver.</p>
+      </div>
+      <div class="pf-grid">
+        <div class="pf-item pf-big fi">
+          <img src="assets/cobertura-metalica.webp" alt="Cobertura metálica residencial em estrutura galvanizada" loading="lazy">
+          <div class="pf-cap"><div class="t">Cobertura Metálica Residencial</div><div class="s">Estrutura galvanizada de alta resistência</div></div>
+        </div>
+        <div class="pf-item fi fi-d1">
+          <img src="assets/rufos-galvanizados.webp" alt="Rufos e acabamentos galvanizados com pingadeira" loading="lazy">
+          <div class="pf-cap"><div class="t">Rufos e Pingadeiras</div><div class="s">Acabamento anti-infiltração</div></div>
+        </div>
+        <div class="pf-item fi fi-d2">
+          <img src="assets/telhado-metalico.webp" alt="Telhado metálico com telhas de aço instaladas" loading="lazy">
+          <div class="pf-cap"><div class="t">Telhado em Telha de Aço</div><div class="s">Residencial — vedação perfeita</div></div>
+        </div>
+        <div class="pf-item fi fi-d1" style="grid-column:span 2;">
+          <img src="assets/pergolado.webp" alt="Pergolado metálico com forro amadeirado sobre área de lazer" loading="lazy">
+          <div class="pf-cap"><div class="t">Pergolado Metálico com Forro Amadeirado</div><div class="s">Estética premium para áreas externas</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF BAR -->
+  <div class="proof-bar">
+    <div class="ctn">
+      <div class="proof-in">
+        <!-- VERIFICAR NÚMEROS COM O JEFFERSON ANTES DE PUBLICAR -->
+        <div class="proof-item"><div class="proof-num">+300</div><div class="proof-lbl">Projetos Realizados</div></div>
+        <div class="proof-sep"></div>
+        <div class="proof-item"><div class="proof-num">10+</div><div class="proof-lbl">Anos de Experiência</div></div>
+        <div class="proof-sep"></div>
+        <div class="proof-item"><div class="proof-num">2h</div><div class="proof-lbl">Resposta de Orçamento</div></div>
+        <div class="proof-sep"></div>
+        <div class="proof-item"><div class="proof-num">100%</div><div class="proof-lbl">Material Galvanizado</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== AUTORIDADE ==================== -->
+  <section class="authority" id="sobre">
+    <div class="auth-in">
+      <div class="auth-photo fi">
+        <img src="assets/jefferson.webp" alt="Jefferson Vargas, responsável técnico da JF Calhas, com equipamentos profissionais">
+        <div class="auth-badge">
+          <div class="ab-ic">🛠️</div>
+          <div><div class="ab-nm">Jefferson Vargas</div><div class="ab-rl">Responsável Técnico — JF Calhas</div></div>
+        </div>
+      </div>
+      <div class="auth-cnt fi fi-d1">
+        <div class="auth-eye">Quem Executa o Seu Serviço</div>
+        <h2 class="auth-ttl">Atendimento direto com <span class="ay">quem bota a mão na obra</span></h2>
+        <p class="auth-p">Na JF Calhas você não fala com intermediário. Quem avalia o seu problema é <strong>Jefferson Vargas</strong>, à frente de cada projeto com ferramentas profissionais e padrão de acabamento que não deixa margem para retrabalho.</p>
+        <p class="auth-p">Cada obra é tratada como se fosse a nossa — porque a sua indicação vale mais que qualquer anúncio.</p>
+        <div class="auth-list">
+          <div class="auth-li"><div class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span>Avaliação técnica feita por quem executa a obra</span></div>
+          <div class="auth-li"><div class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span>Material galvanizado e ferramentas de linha profissional</span></div>
+          <div class="auth-li"><div class="ck"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><span>Acabamento limpo, sem improviso e sem remendo</span></div>
+        </div>
+        <a href="#orcamento" class="btn btn-o">Falar com o Jefferson →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FILTRO ==================== -->
+  <section class="filter">
+    <div class="ctn">
+      <div class="sec-hdr">
+        <div class="sec-eye">Para quem é</div>
+        <h2 class="sec-ttl">A JF Calhas é a solução <span style="color:var(--tm);font-weight:400">certa para você?</span></h2>
+        <p class="sec-sub">Trabalhamos com quem busca qualidade real, durabilidade e solução definitiva — não remendo.</p>
+      </div>
+      <div class="flt-grid">
+        <div class="flt-col flt-is fi">
+          <div class="flt-col-ttl"><div class="col-ic ic-is"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></div><span class="col-is-txt">Para quem é ideal</span></div>
+          <div class="flt-items">
+            <div class="fi-row"><div class="fi-dot dot-g"></div><p class="fi-txt"><strong>Proprietários residenciais</strong> que sofrem com goteiras, infiltrações e calhas entupidas que danificam o imóvel</p></div>
+            <div class="fi-row"><div class="fi-dot dot-g"></div><p class="fi-txt"><strong>Empresas e indústrias</strong> que precisam de galpões, coberturas metálicas e estruturas de alta resistência</p></div>
+            <div class="fi-row"><div class="fi-dot dot-g"></div><p class="fi-txt"><strong>Construtoras e arquitetos</strong> que buscam parceiros confiáveis para execução de pergolados e estruturas metálicas</p></div>
+            <div class="fi-row"><div class="fi-dot dot-g"></div><p class="fi-txt"><strong>Quem valoriza qualidade</strong> e entende que solução definitiva tem um custo justo — não o mais barato do mercado</p></div>
+          </div>
+        </div>
+        <div class="flt-col flt-not fi fi-d1">
+          <div class="flt-col-ttl"><div class="col-ic ic-not"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><span class="col-not-txt">Não é para você se</span></div>
+          <div class="flt-items">
+            <div class="fi-row"><div class="fi-dot dot-r"></div><p class="fi-txt"><strong>Busca remendo provisório</strong> com fita asfáltica ou solução temporária que vai falhar na próxima chuva</p></div>
+            <div class="fi-row"><div class="fi-dot dot-r"></div><p class="fi-txt"><strong>Prioriza o menor preço</strong> acima da qualidade do material e da segurança estrutural do imóvel</p></div>
+            <div class="fi-row"><div class="fi-dot dot-r"></div><p class="fi-txt"><strong>Não tem urgência</strong> em resolver o problema agora e prefere esperar até o dano ficar muito maior</p></div>
+            <div class="fi-row"><div class="fi-dot dot-r"></div><p class="fi-txt"><strong>Busca apenas cotação</strong> sem intenção real de resolver o problema a curto prazo</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="flt-cta">
+        <p>Se você se identificou com o primeiro grupo, <strong style="color:var(--y)">sua solução está aqui.</strong></p>
+        <a href="#orcamento" class="btn btn-o" style="font-size:1.1rem;padding:15px 32px">Solicitar Orçamento rápido e preciso →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe"></div>
+
+  <!-- ==================== AVALIAÇÕES GOOGLE ==================== -->
+  <section class="testi" id="avaliacoes">
+    <div class="ctn testi-in">
+      <div class="sec-hdr">
+        <div class="sec-eye">Avaliações no Google</div>
+        <h2 class="sec-ttl">O que dizem quem já <span style="color:var(--y)">protegeu o imóvel</span></h2>
+        <p class="sec-sub">Avaliações reais de clientes da JF Calhas no Google Meu Negócio.</p>
+      </div>
+
+      <div class="g-summary">
+        <svg class="gs-g" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.52 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47c-.28 1.48-1.12 2.73-2.38 3.58v3h3.84c2.25-2.07 3.55-5.12 3.55-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.84-3c-1.07.72-2.45 1.15-4.09 1.15-3.14 0-5.8-2.12-6.76-4.98H1.26v3.09C3.23 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.24 14.26c-.24-.72-.38-1.49-.38-2.26s.14-1.54.38-2.26V6.65H1.26C.46 8.24 0 10.06 0 12s.46 3.76 1.26 5.35l3.98-3.09z"/><path fill="#EA4335" d="M12 4.77c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.23 2.7 1.26 6.65l3.98 3.09C6.2 6.88 8.86 4.77 12 4.77z"/></svg>
+        <div><div class="gs-score">5,0</div><div class="gs-stars">★★★★★</div></div>
+        <div class="gs-sep"></div>
+        <div class="gs-lbl">Nota máxima nas<br>avaliações do Google</div>
+      </div>
+
+      <!-- Avaliações reais importadas do Google Meu Negócio -->
+      <div class="rv-grid">
+        <div class="rv-card fi">
+          <svg class="rv-g" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.52 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47c-.28 1.48-1.12 2.73-2.38 3.58v3h3.84c2.25-2.07 3.55-5.12 3.55-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.84-3c-1.07.72-2.45 1.15-4.09 1.15-3.14 0-5.8-2.12-6.76-4.98H1.26v3.09C3.23 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.24 14.26c-.24-.72-.38-1.49-.38-2.26s.14-1.54.38-2.26V6.65H1.26C.46 8.24 0 10.06 0 12s.46 3.76 1.26 5.35l3.98-3.09z"/><path fill="#EA4335" d="M12 4.77c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.23 2.7 1.26 6.65l3.98 3.09C6.2 6.88 8.86 4.77 12 4.77z"/></svg>
+          <div class="rv-head">
+            <div class="rv-av" style="background:#1E8E3E">L</div>
+            <div><div class="rv-nm">Luiz Ricardo Dos Santos</div><div class="rv-sub">4 avaliações · há 5 semanas</div></div>
+          </div>
+          <div class="rv-stars">★★★★★</div>
+          <p class="rv-txt">Excelente profissional.</p>
+        </div>
+
+        <div class="rv-card fi fi-d1">
+          <svg class="rv-g" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.52 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47c-.28 1.48-1.12 2.73-2.38 3.58v3h3.84c2.25-2.07 3.55-5.12 3.55-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.84-3c-1.07.72-2.45 1.15-4.09 1.15-3.14 0-5.8-2.12-6.76-4.98H1.26v3.09C3.23 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.24 14.26c-.24-.72-.38-1.49-.38-2.26s.14-1.54.38-2.26V6.65H1.26C.46 8.24 0 10.06 0 12s.46 3.76 1.26 5.35l3.98-3.09z"/><path fill="#EA4335" d="M12 4.77c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.23 2.7 1.26 6.65l3.98 3.09C6.2 6.88 8.86 4.77 12 4.77z"/></svg>
+          <div class="rv-head">
+            <div class="rv-av" style="background:#00897B">M</div>
+            <div><div class="rv-nm">Maxsuei Quadros</div><div class="rv-sub">1 avaliação · há 5 semanas</div></div>
+          </div>
+          <div class="rv-stars">★★★★★</div>
+          <p class="rv-txt">Trabalho excelente, nota 10.</p>
+        </div>
+
+        <div class="rv-card fi fi-d2">
+          <svg class="rv-g" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.52 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47c-.28 1.48-1.12 2.73-2.38 3.58v3h3.84c2.25-2.07 3.55-5.12 3.55-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.84-3c-1.07.72-2.45 1.15-4.09 1.15-3.14 0-5.8-2.12-6.76-4.98H1.26v3.09C3.23 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.24 14.26c-.24-.72-.38-1.49-.38-2.26s.14-1.54.38-2.26V6.65H1.26C.46 8.24 0 10.06 0 12s.46 3.76 1.26 5.35l3.98-3.09z"/><path fill="#EA4335" d="M12 4.77c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.23 2.7 1.26 6.65l3.98 3.09C6.2 6.88 8.86 4.77 12 4.77z"/></svg>
+          <div class="rv-head">
+            <div class="rv-av" style="background:#D93025">V</div>
+            <div><div class="rv-nm">Victor Jara</div><div class="rv-sub">9 avaliações · há 6 semanas</div></div>
+          </div>
+          <div class="rv-stars">★★★★★</div>
+          <p class="rv-txt">Excelente profissional, super indico. Agilidade e confiança!</p>
+        </div>
+
+        <div class="rv-card fi">
+          <svg class="rv-g" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.52 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47c-.28 1.48-1.12 2.73-2.38 3.58v3h3.84c2.25-2.07 3.55-5.12 3.55-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.84-3c-1.07.72-2.45 1.15-4.09 1.15-3.14 0-5.8-2.12-6.76-4.98H1.26v3.09C3.23 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.24 14.26c-.24-.72-.38-1.49-.38-2.26s.14-1.54.38-2.26V6.65H1.26C.46 8.24 0 10.06 0 12s.46 3.76 1.26 5.35l3.98-3.09z"/><path fill="#EA4335" d="M12 4.77c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.23 2.7 1.26 6.65l3.98 3.09C6.2 6.88 8.86 4.77 12 4.77z"/></svg>
+          <div class="rv-head">
+            <div class="rv-av" style="background:#C2185B">V</div>
+            <div><div class="rv-nm">Veridiana Costa</div><div class="rv-sub">1 avaliação · há 6 semanas</div></div>
+          </div>
+          <div class="rv-stars">★★★★★</div>
+          <p class="rv-txt">Serviço com qualidade, eu indico.</p>
+        </div>
+
+        <div class="rv-card fi fi-d1">
+          <svg class="rv-g" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.52 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47c-.28 1.48-1.12 2.73-2.38 3.58v3h3.84c2.25-2.07 3.55-5.12 3.55-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.84-3c-1.07.72-2.45 1.15-4.09 1.15-3.14 0-5.8-2.12-6.76-4.98H1.26v3.09C3.23 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.24 14.26c-.24-.72-.38-1.49-.38-2.26s.14-1.54.38-2.26V6.65H1.26C.46 8.24 0 10.06 0 12s.46 3.76 1.26 5.35l3.98-3.09z"/><path fill="#EA4335" d="M12 4.77c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.23 2.7 1.26 6.65l3.98 3.09C6.2 6.88 8.86 4.77 12 4.77z"/></svg>
+          <div class="rv-head">
+            <div class="rv-av" style="background:#1A73E8">A</div>
+            <div><div class="rv-nm">Achadinhos Mamãe</div><div class="rv-sub">1 avaliação · há 6 semanas</div></div>
+          </div>
+          <div class="rv-stars">★★★★★</div>
+          <p class="rv-txt">Fui atendida pelo profissional em um momento de emergência, depois de vários profissionais já terem ido até a minha casa sem resolver. Resolveu com rapidez e capricho.</p>
+        </div>
+
+        <div class="rv-card fi fi-d2">
+          <svg class="rv-g" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.52 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47c-.28 1.48-1.12 2.73-2.38 3.58v3h3.84c2.25-2.07 3.55-5.12 3.55-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.84-3c-1.07.72-2.45 1.15-4.09 1.15-3.14 0-5.8-2.12-6.76-4.98H1.26v3.09C3.23 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.24 14.26c-.24-.72-.38-1.49-.38-2.26s.14-1.54.38-2.26V6.65H1.26C.46 8.24 0 10.06 0 12s.46 3.76 1.26 5.35l3.98-3.09z"/><path fill="#EA4335" d="M12 4.77c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.23 2.7 1.26 6.65l3.98 3.09C6.2 6.88 8.86 4.77 12 4.77z"/></svg>
+          <div class="rv-head">
+            <div class="rv-av" style="background:#E8710A">J</div>
+            <div><div class="rv-nm">Jacqueline M V Ferreira</div><div class="rv-sub"><span class="rv-lg">Local Guide</span> · 22 avaliações</div></div>
+          </div>
+          <div class="rv-stars">★★★★★</div>
+          <p class="rv-txt">Pessoal muito profissional, disposto a resolver o problema, muito competentes. Recomendo muito!</p>
+        </div>
+      </div>
+
+      <div class="testi-cta">
+        <!-- Substitua o link abaixo pela URL do seu perfil no Google Meu Negócio -->
+        <a href="https://www.google.com/search?q=JF+Calhas+Ribeir%C3%A3o+Preto" class="btn-google" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M23.52 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47c-.28 1.48-1.12 2.73-2.38 3.58v3h3.84c2.25-2.07 3.55-5.12 3.55-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.84-3c-1.07.72-2.45 1.15-4.09 1.15-3.14 0-5.8-2.12-6.76-4.98H1.26v3.09C3.23 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.24 14.26c-.24-.72-.38-1.49-.38-2.26s.14-1.54.38-2.26V6.65H1.26C.46 8.24 0 10.06 0 12s.46 3.76 1.26 5.35l3.98-3.09z"/><path fill="#EA4335" d="M12 4.77c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.23 2.7 1.26 6.65l3.98 3.09C6.2 6.88 8.86 4.77 12 4.77z"/></svg>
+          Ver todas as avaliações no Google
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA FINAL ==================== -->
+  <section class="cta-sec">
+    <h2 class="cta-ttl">Pronto para acabar<br>com as <span class="ay">infiltrações?</span></h2>
+    <p class="cta-p">Não espere o próximo temporal para agir. Solicite seu orçamento agora e proteja o que é seu.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/5516993462652?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento." class="btn btn-o js-wa" target="_blank" rel="noopener" style="font-size:1.05rem;padding:16px 32px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chamar no WhatsApp
+      </a>
+      <a href="#orcamento" class="btn btn-g" style="font-size:1.05rem;padding:16px 32px">Preencher Formulário</a>
+    </div>
+  </section>
+
+  <div class="stripe"></div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" id="contato">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <div class="ft-logo">
+          <img class="logo-img" src="assets/logo-jf.webp" alt="JF Calhas">
+          <div class="logo-txt"><span class="name">JF CALHAS</span><span class="sub">Estruturas Metálicas</span></div>
+        </div>
+        <p>Soluções completas em calhas, telhados e estruturas metálicas para residências e empresas em Ribeirão Preto e região.</p>
+      </div>
+      <div>
+        <div class="ft-col-ttl">Serviços</div>
+        <div class="ft-links">
+          <a href="#servicos" class="ft-lk">Calhas, Rufos e Pingadeiras</a>
+          <a href="#servicos" class="ft-lk">Estruturas em Galvalume</a>
+          <a href="#servicos" class="ft-lk">Telhas em Aço e Sanduíche</a>
+          <a href="#servicos" class="ft-lk">Coberturas Metálicas</a>
+          <a href="#trabalhos" class="ft-lk">Pergolados Metálicos</a>
+          <a href="#servicos" class="ft-lk">Coberturas em Policarbonato</a>
+        </div>
+      </div>
+      <div class="ft-contact">
+        <div class="ft-col-ttl">Contato</div>
+        <p>
+          <strong style="color:#ccc">WhatsApp:</strong><br><a href="https://wa.me/5516993462652" class="js-wa" target="_blank">(16) 99346-2652</a><br><br>
+          <strong style="color:#ccc">Instagram:</strong><br><a href="https://www.instagram.com/jfcalhas.ribeirao/" target="_blank">@jfcalhas.ribeirao</a><br><br>
+          <strong style="color:#ccc">Região:</strong><br>Ribeirão Preto e região
+        </p>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <div class="ft-legal">
+        <strong>Jefferson Jara Vargas</strong> — CNPJ: 49.401.126/0001-67 — Microempreendedor Individual (MEI)<br>
+        © 2024 JF Calhas. Todos os direitos reservados. Ribeirão Preto/SP.
+      </div>
+      <a href="privacidade.html" class="ft-priv">Política de Privacidade</a>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/5516993462652?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento." class="wf js-wa" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span>Fale Conosco</span>
+  </a>
+
+  <!-- ============================================================
+       ⚙️ CONFIGURAÇÃO — EDITE APENAS ESTE BLOCO
+       ============================================================
+       pixel    → ID do Pixel do Meta. Dispara: PageView (ao abrir),
+                  Lead (envio do formulário) e Contact (clique no WhatsApp).
+                  Deixe '' para desativar o rastreamento.
+       webhook  → URL que recebe os leads (n8n, Make, Zapier, RD Station,
+                  ActiveCampaign). Recebe um JSON com:
+                  nome, cidade, whatsapp, mensagem, utm_source, utm_medium,
+                  utm_campaign, utm_content, utm_term, pagina.
+                  Deixe '' para apenas redirecionar, sem enviar.
+       obrigado → Página de agradecimento (redirecionamento pós-envio).
+  ============================================================ -->
+  <script>
+    window.JF_CONFIG = {
+      pixel:    '1087983027592383',
+      webhook:  'https://ancientlookingkiwi-n8n.cloudfy.live/webhook/jf-calhas-lead',
+      obrigado: 'obrigado.html'
+    };
+  </script>
+
+  <!-- ==================== MOTOR (não precisa editar) ==================== -->
+  <script>
+  (function () {
+    var cfg = window.JF_CONFIG || {};
+
+    /* ---- Meta Pixel (PageView) ---- */
+    if (cfg.pixel) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', cfg.pixel);
+      fbq('track', 'PageView');
+    }
+    function track(ev, data){ if (window.fbq && cfg.pixel) { try { fbq('track', ev, data || {}); } catch(e){} } }
+
+    /* ---- UTMs da URL ---- */
+    function getUTMs() {
+      var p = new URLSearchParams(window.location.search), o = {};
+      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){ o[k] = p.get(k) || ''; });
+      return o;
+    }
+    function utmQuery() {
+      var u = getUTMs(), s = '';
+      Object.keys(u).forEach(function(k){ if (u[k]) s += '&' + k + '=' + encodeURIComponent(u[k]); });
+      return s;
+    }
+
+    /* ---- Máscara WhatsApp ---- */
+    var wpp = document.getElementById('wpp');
+    if (wpp) wpp.addEventListener('input', function(e){
+      var v = e.target.value.replace(/\D/g,'').substring(0,11);
+      if (v.length > 7) v = '('+v.substring(0,2)+') '+v.substring(2,7)+'-'+v.substring(7);
+      else if (v.length > 2) v = '('+v.substring(0,2)+') '+v.substring(2);
+      else if (v.length > 0) v = '('+v;
+      e.target.value = v;
+    });
+
+    /* ---- Clique no WhatsApp → evento Contact ---- */
+    document.querySelectorAll('.js-wa').forEach(function(a){
+      a.addEventListener('click', function(){ track('Contact', { method:'whatsapp' }); });
+    });
+
+    /* ---- Envio do formulário ---- */
+    var form = document.getElementById('leadForm');
+    if (form) form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var nome   = document.getElementById('nome').value.trim();
+      var cidade = document.getElementById('cidade').value.trim();
+      var fone   = document.getElementById('wpp').value.trim();
+      var msg    = document.getElementById('prob').value.trim();
+
+      if (!nome || !cidade || !fone || !msg) {
+        var fc = document.querySelector('.form-card');
+        fc.style.animation = 'shake .4s ease';
+        setTimeout(function(){ fc.style.animation=''; }, 400);
+        return;
+      }
+
+      var btn = document.getElementById('subBtn');
+      btn.disabled = true; btn.style.opacity = '.65'; btn.textContent = 'Enviando...';
+
+      var u = getUTMs();
+      var payload = {
+        nome: nome, cidade: cidade, whatsapp: fone, mensagem: msg,
+        utm_source: u.utm_source, utm_medium: u.utm_medium, utm_campaign: u.utm_campaign,
+        utm_content: u.utm_content, utm_term: u.utm_term, pagina: 'index'
+      };
+
+      track('Lead', { content_name: 'orcamento_jf_calhas' });
+      try { sessionStorage.setItem('jf_lead', nome); } catch(err){}
+
+      function go(){ window.location.href = (cfg.obrigado || 'obrigado.html') + '?nome=' + encodeURIComponent(nome) + utmQuery(); }
+
+      if (cfg.webhook) {
+        // text/plain + no-cors = evita bloqueio de CORS e garante a entrega do lead ao n8n
+        fetch(cfg.webhook, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+          body: JSON.stringify(payload),
+          mode: 'no-cors'
+        }).then(go).catch(go);
+        setTimeout(go, 2500); // garante redirecionamento mesmo se o webhook travar
+      } else {
+        setTimeout(go, 500);
+      }
+    });
+
+    /* ---- Animações de entrada ---- */
+    var fiEls = document.querySelectorAll('.fi');
+    if ('IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('vis'); obs.unobserve(en.target); } });
+      }, { threshold: 0.12 });
+      fiEls.forEach(function(el){ obs.observe(el); });
+    } else { fiEls.forEach(function(el){ el.classList.add('vis'); }); }
+
+    /* ---- Sombra do nav ao rolar ---- */
+    var nav = document.getElementById('topNav');
+    window.addEventListener('scroll', function(){
+      nav.style.boxShadow = window.scrollY > 60 ? '0 4px 24px rgba(0,0,0,.55)' : 'none';
+    }, { passive: true });
+  })();
+  </script>
+
+</body>
+</html>
