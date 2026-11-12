@@ -716,10 +716,20 @@
       btn.disabled = true; btn.style.opacity = '.65'; btn.textContent = 'Enviando...';
 
       var u = getUTMs();
+      /* ID único compartilhado entre Pixel (navegador) e API de Conversões (n8n) → evita lead duplicado */
+      var eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
+      function getCookie(n){ var m = document.cookie.match('(^|;)\\s*' + n + '=([^;]*)'); return m ? decodeURIComponent(m[2]) : ''; }
+      var fbc = getCookie('_fbc');
+      if (!fbc) {
+        var fbclid = new URLSearchParams(location.search).get('fbclid');
+        if (fbclid) fbc = 'fb.1.' + Date.now() + '.' + fbclid;
+      }
       var payload = {
         nome: nome, cidade: cidade, whatsapp: fone, mensagem: msg,
         utm_source: u.utm_source, utm_medium: u.utm_medium, utm_campaign: u.utm_campaign,
-        utm_content: u.utm_content, utm_term: u.utm_term, pagina: 'index'
+        utm_content: u.utm_content, utm_term: u.utm_term, pagina: 'index',
+        event_id: eventId, fbp: getCookie('_fbp'), fbc: fbc,
+        user_agent: navigator.userAgent, page_url: location.href
       };
 
       try { sessionStorage.setItem('jf_lead', nome); } catch(err){}
@@ -729,7 +739,7 @@
       /* Dispara Lead e aguarda confirmação do Pixel antes de redirecionar */
       if (window.fbq && cfg.pixel) {
         try {
-          fbq('track', 'Lead', { content_name: 'orcamento_jf_calhas' }, { eventID: 'lead_' + Date.now() });
+          fbq('track', 'Lead', { content_name: 'orcamento_jf_calhas' }, { eventID: eventId });
         } catch(e) {}
       }
 
