@@ -722,10 +722,16 @@
         utm_content: u.utm_content, utm_term: u.utm_term, pagina: 'index'
       };
 
-      track('Lead', { content_name: 'orcamento_jf_calhas' });
       try { sessionStorage.setItem('jf_lead', nome); } catch(err){}
 
       function go(){ window.location.href = (cfg.obrigado || 'obrigado.html') + '?nome=' + encodeURIComponent(nome) + utmQuery(); }
+
+      /* Dispara Lead e aguarda confirmação do Pixel antes de redirecionar */
+      if (window.fbq && cfg.pixel) {
+        try {
+          fbq('track', 'Lead', { content_name: 'orcamento_jf_calhas' }, { eventID: 'lead_' + Date.now() });
+        } catch(e) {}
+      }
 
       if (cfg.webhook) {
         // text/plain + no-cors = evita bloqueio de CORS e garante a entrega do lead ao n8n
@@ -734,10 +740,10 @@
           headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
           body: JSON.stringify(payload),
           mode: 'no-cors'
-        }).then(go).catch(go);
-        setTimeout(go, 2500); // garante redirecionamento mesmo se o webhook travar
+        }).then(function(){ setTimeout(go, 800); }).catch(function(){ setTimeout(go, 800); });
+        setTimeout(go, 3000); // garante redirecionamento mesmo se o webhook travar
       } else {
-        setTimeout(go, 500);
+        setTimeout(go, 800); // tempo suficiente para o Pixel enviar o evento
       }
     });
 
